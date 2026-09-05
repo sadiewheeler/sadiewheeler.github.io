@@ -1,6 +1,41 @@
-/* --------------------------------
-   General Styles
--------------------------------- */
+/* ==================================================
+   CSS - CASCADING STYLE SHEETS
+   ==================================================
+
+   CSS controls how the HTML looks.
+
+   HTML tells the browser WHAT something is.
+
+   CSS tells the browser HOW it should look.
+
+   Basic CSS structure:
+
+       selector {
+           property: value;
+       }
+
+   Example:
+
+       body {
+           color: green;
+       }
+
+   This means:
+   "Make the text inside the body green."
+*/
+
+
+/* ==================================================
+   GENERAL / RESET STYLES
+   ==================================================
+
+   The * symbol is called the universal selector.
+
+   It selects EVERY element on the page.
+
+   We use it here to remove some default browser
+   spacing so we have more control over the design.
+*/
 
 * {
     box-sizing: border-box;
@@ -8,392 +43,985 @@
     padding: 0;
 }
 
+
+/*
+   "scroll-behavior: smooth" makes navigation links
+   smoothly scroll down the page instead of jumping
+   instantly.
+*/
+
 html {
     scroll-behavior: smooth;
 }
 
+
+/* ==================================================
+   BODY
+   ==================================================
+
+   The body contains everything visitors see.
+
+   We are setting:
+
+   - Font
+   - Line spacing
+   - Text color
+   - Background color
+*/
+
 body {
     font-family: Arial, Helvetica, sans-serif;
+
     line-height: 1.6;
+
     color: #30302D;
+
     background-color: #F7F4ED;
 }
 
+
+/*
+   This removes the default underline from links.
+
+   We will add our own styling later.
+*/
+
 a {
     text-decoration: none;
+
     color: inherit;
 }
 
 
-/* --------------------------------
-   Navigation
--------------------------------- */
+/* ==================================================
+   NAVIGATION BAR
+   ==================================================
+
+   .navbar means:
+
+   "Find any HTML element with
+   class='navbar'."
+
+   The period before navbar means we are
+   selecting a CLASS.
+*/
 
 .navbar {
+
+    /*
+       position: sticky means the navigation
+       stays visible as the visitor scrolls.
+    */
+
     position: sticky;
+
     top: 0;
+
+    /*
+       z-index controls which elements appear
+       in front of other elements.
+
+       A high number keeps the navigation
+       above the rest of the page.
+    */
+
     z-index: 1000;
+
     background-color: #4B263F;
+
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
 }
 
+
+/*
+   .nav-container controls the content INSIDE
+   the navigation bar.
+*/
+
 .nav-container {
+
+    /*
+       Prevents the content from becoming
+       extremely wide on large monitors.
+    */
+
     max-width: 1100px;
+
+    /*
+       margin: auto centers the container.
+    */
+
     margin: 0 auto;
+
     padding: 0 25px;
+
     min-height: 70px;
 
+
+    /*
+       FLEXBOX
+
+       display: flex tells CSS to arrange
+       the elements in a flexible layout.
+    */
+
     display: flex;
+
+    /*
+       Aligns items vertically.
+    */
+
     align-items: center;
+
+    /*
+       Puts the logo on one side and the
+       navigation links on the other.
+    */
+
     justify-content: space-between;
 }
 
+
+/*
+   The "SG" logo.
+*/
+
 .logo {
+
     font-size: 1.4rem;
+
     font-weight: bold;
+
     color: #FFFFFF;
+
     letter-spacing: 2px;
 }
 
+
+/*
+   Container holding the navigation links.
+*/
+
 .nav-links {
+
     display: flex;
+
+    /*
+       Creates space between each link.
+    */
+
     gap: 28px;
 }
 
+
+/*
+   Individual navigation links.
+*/
+
 .nav-links a {
+
     color: #FFFFFF;
+
     font-size: 0.95rem;
+
+    /*
+       transition makes the hover effect
+       happen smoothly.
+    */
+
     transition: color 0.3s ease;
 }
 
+
+/*
+   :hover means:
+
+   "Apply these styles when the mouse
+   is hovering over the element."
+*/
+
 .nav-links a:hover {
+
     color: #A5B278;
 }
 
 
-/* --------------------------------
-   Hero / Header
--------------------------------- */
+/* ==================================================
+   HERO / HEADER
+   ==================================================
+
+   The hero is the large introductory area
+   at the top of the website.
+*/
 
 .hero {
+
+    /*
+       min-height means this section will be
+       at least 600 pixels tall.
+    */
+
     min-height: 600px;
+
     display: flex;
+
+    /*
+       Centers content horizontally.
+    */
+
     align-items: center;
+
+    /*
+       Centers content vertically.
+    */
+
     justify-content: center;
+
     text-align: center;
 
     background-color: #4B263F;
+
     color: #FFFFFF;
 
     padding: 80px 25px;
 }
 
+
+/*
+   Limits how wide the hero text can become.
+*/
+
 .hero-content {
+
     max-width: 800px;
 }
 
+
+/*
+   Small uppercase text above the main heading.
+*/
+
 .eyebrow {
+
     color: #A5B278;
+
     font-size: 0.85rem;
+
     font-weight: bold;
+
     letter-spacing: 3px;
+
     margin-bottom: 20px;
 }
+
+
+/*
+   Main name heading.
+*/
 
 .hero h1 {
+
+    /*
+       clamp() allows the font size to
+       adjust depending on screen size.
+
+       This helps make the site responsive.
+    */
+
     font-size: clamp(3rem, 8vw, 6rem);
+
     line-height: 1.1;
+
     margin-bottom: 20px;
 }
 
+
+/*
+   Professional title under the name.
+*/
+
 .hero h2 {
+
     font-size: clamp(1.2rem, 3vw, 1.7rem);
+
     font-weight: normal;
+
     color: #E8E4D8;
+
     margin-bottom: 10px;
 }
 
+
+/*
+   University text.
+*/
+
 .university {
+
     color: #D0C8C1;
+
     margin-bottom: 35px;
 }
 
+
+/*
+   The "Explore My Portfolio" link.
+
+   HTML created the link.
+
+   CSS makes it LOOK like a button.
+*/
+
 .button {
+
     display: inline-block;
+
     padding: 13px 28px;
+
     background-color: #71823D;
+
     color: #FFFFFF;
+
     border-radius: 5px;
+
     font-weight: bold;
-    transition: transform 0.3s ease, background-color 0.3s ease;
+
+    transition:
+        transform 0.3s ease,
+        background-color 0.3s ease;
 }
 
+
+/*
+   Button hover effect.
+*/
+
 .button:hover {
+
     background-color: #879951;
+
+    /*
+       translateY(-2px) moves the button
+       slightly upward.
+    */
+
     transform: translateY(-2px);
 }
 
 
-/* --------------------------------
-   Sections
--------------------------------- */
+/* ==================================================
+   GENERAL SECTION STYLES
+   ==================================================
+
+   These styles apply to multiple sections.
+*/
 
 .section {
+
+    /*
+       90px of space above and below
+       each section.
+    */
+
     padding: 90px 25px;
 }
 
+
+/*
+   Some sections have a white background
+   instead of the cream background.
+*/
+
 .section-light {
+
     background-color: #FFFFFF;
 }
 
+
+/*
+   Limits the width of the actual content.
+*/
+
 .section-container {
+
     max-width: 1000px;
+
     margin: 0 auto;
 }
 
+
+/*
+   Small uppercase label above section headings.
+*/
+
 .section-label {
+
     color: #71823D;
+
     font-size: 0.8rem;
+
     font-weight: bold;
+
     letter-spacing: 2px;
+
     margin-bottom: 8px;
 }
 
+
+/*
+   Section headings such as:
+
+   About Me
+   Skills
+   Projects
+   Resume
+   Contact
+*/
+
 .section h2 {
+
     color: #4B263F;
+
     font-size: 2.5rem;
+
     margin-bottom: 30px;
 }
 
 
-/* --------------------------------
-   About
--------------------------------- */
+/* ==================================================
+   ABOUT ME
+   ================================================== */
 
 .about-text {
+
     max-width: 850px;
+
     font-size: 1.08rem;
+
     color: #4A4944;
 }
 
 
-/* --------------------------------
-   Skills
--------------------------------- */
+/* ==================================================
+   SKILLS
+   ================================================== */
+
+
+/*
+   .skills-grid is the container holding
+   all of the individual skills.
+*/
 
 .skills-grid {
+
     display: grid;
+
+    /*
+       Creates 3 equal columns.
+
+       repeat(3, 1fr)
+
+       means:
+
+       "Make 3 columns and give each
+       column an equal amount of space."
+    */
+
     grid-template-columns: repeat(3, 1fr);
+
     gap: 15px;
 }
 
+
+/*
+   Each individual skill box.
+*/
+
 .skill {
+
     padding: 18px 20px;
+
     background-color: #F7F4ED;
+
+    /*
+       A decorative olive line on the
+       left side of each skill.
+    */
+
     border-left: 4px solid #71823D;
+
     font-weight: 600;
+
     color: #4B263F;
-    transition: transform 0.2s ease, border-color 0.2s ease;
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease;
 }
 
+
+/*
+   Skill hover effect.
+*/
+
 .skill:hover {
+
     transform: translateY(-3px);
+
     border-color: #4B263F;
 }
 
 
-/* --------------------------------
-   Projects
--------------------------------- */
+/* ==================================================
+   PROJECTS
+   ================================================== */
 
 .projects-grid {
+
     display: grid;
+
+    /*
+       Two columns on larger screens.
+    */
+
     grid-template-columns: repeat(2, 1fr);
+
     gap: 25px;
 }
 
+
+/*
+   Individual project cards.
+*/
+
 .project-card {
+
     padding: 30px;
+
     background-color: #FFFFFF;
+
     border-radius: 8px;
+
     border: 1px solid #E1DED5;
-    box-shadow: 0 5px 20px rgba(75, 38, 63, 0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    /*
+       Creates a subtle shadow underneath
+       each project card.
+    */
+
+    box-shadow:
+        0 5px 20px rgba(75, 38, 63, 0.08);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
 }
+
+
+/*
+   Project card hover effect.
+*/
 
 .project-card:hover {
+
     transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(75, 38, 63, 0.15);
+
+    box-shadow:
+        0 10px 25px rgba(75, 38, 63, 0.15);
 }
 
+
+/*
+   Project numbers: 01, 02, 03, 04
+*/
+
 .project-number {
+
     display: block;
+
     color: #71823D;
+
     font-weight: bold;
+
     margin-bottom: 15px;
 }
 
+
+/*
+   Project titles.
+*/
+
 .project-card h3 {
+
     color: #4B263F;
+
     font-size: 1.3rem;
+
     margin-bottom: 12px;
 }
 
+
+/*
+   Project descriptions.
+*/
+
 .project-card p {
+
     color: #5A5954;
 }
 
 
-/* --------------------------------
-   Resume
--------------------------------- */
+/* ==================================================
+   RESUME
+   ================================================== */
 
 .resume-box {
+
     max-width: 700px;
+
     padding: 35px;
+
+    /*
+       Dashed border gives this a "coming soon"
+       placeholder appearance.
+    */
+
     border: 2px dashed #A5B278;
+
     border-radius: 8px;
+
     text-align: center;
 }
 
+
 .resume-box p {
+
     color: #5A5954;
+
     margin-bottom: 15px;
 }
 
+
+/*
+   "Resume Coming Soon" label.
+*/
+
 .coming-soon {
+
     display: inline-block;
+
     padding: 8px 16px;
+
     background-color: #EEF0E5;
+
     color: #59672F;
+
     border-radius: 20px;
+
     font-size: 0.9rem;
+
     font-weight: bold;
 }
 
 
-/* --------------------------------
-   Contact
--------------------------------- */
+/* ==================================================
+   CONTACT
+   ================================================== */
 
 .contact-section {
+
     background-color: #4B263F;
+
     color: #FFFFFF;
 }
 
+
+/*
+   The label in the dark contact section
+   needs to be light enough to see.
+*/
+
 .contact-section .section-label {
+
     color: #A5B278;
 }
 
+
+/*
+   The Contact heading needs to be white
+   because the background is aubergine.
+*/
+
 .contact-section h2 {
+
     color: #FFFFFF;
 }
 
+
+/*
+   Introductory contact paragraph.
+*/
+
 .contact-intro {
+
     max-width: 650px;
+
     color: #E8E4D8;
+
     margin-bottom: 35px;
 }
 
+
+/*
+   Container holding Email, LinkedIn,
+   and GitHub.
+*/
+
 .contact-links {
+
     display: grid;
+
     grid-template-columns: repeat(3, 1fr);
+
     gap: 20px;
 }
 
+
+/*
+   Individual contact cards.
+*/
+
 .contact-card {
+
     display: flex;
+
+    /*
+       Places the title above the
+       contact information.
+    */
+
     flex-direction: column;
+
     gap: 5px;
+
     padding: 25px;
+
     border: 1px solid #735369;
+
     border-radius: 8px;
+
     color: #FFFFFF;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease;
 }
 
+
+/*
+   Contact card hover effect.
+*/
+
 .contact-card:hover {
+
     background-color: #5A334E;
+
     transform: translateY(-3px);
 }
 
+
+/*
+   Email / LinkedIn / GitHub labels.
+*/
+
 .contact-title {
+
     color: #A5B278;
+
     font-weight: bold;
+
     font-size: 0.85rem;
+
     text-transform: uppercase;
+
     letter-spacing: 1px;
 }
 
 
-/* --------------------------------
-   Footer
--------------------------------- */
+/* ==================================================
+   FOOTER
+   ================================================== */
 
 footer {
+
     text-align: center;
+
     padding: 25px;
+
     background-color: #351B2D;
+
     color: #D0C8C1;
+
     font-size: 0.85rem;
 }
 
 
-/* --------------------------------
-   Responsive / Mobile Design
--------------------------------- */
+/* ==================================================
+   RESPONSIVE DESIGN
+   ==================================================
+
+   This is one of the most important parts
+   for your assignment.
+
+   @media means:
+
+   "When the screen meets this condition,
+   change these styles."
+
+   Here we are saying:
+
+   "If the screen is 768 pixels wide
+   or smaller, adjust the layout."
+*/
 
 @media (max-width: 768px) {
 
+
+    /*
+       Navigation becomes vertical
+       on smaller screens.
+    */
+
     .nav-container {
+
         flex-direction: column;
+
         padding: 18px 20px;
+
         gap: 15px;
     }
+
+
+    /*
+       Navigation links can wrap onto
+       multiple lines.
+    */
 
     .nav-links {
+
         flex-wrap: wrap;
+
         justify-content: center;
+
         gap: 15px;
     }
 
+
+    /*
+       Make the hero slightly shorter
+       on smaller screens.
+    */
+
     .hero {
+
         min-height: 500px;
     }
 
+
+    /*
+       Reduce section spacing on
+       smaller screens.
+    */
+
     .section {
+
         padding: 65px 20px;
     }
 
+
+    /*
+       Skills change from 3 columns
+       to 2 columns.
+    */
+
     .skills-grid {
+
         grid-template-columns: repeat(2, 1fr);
     }
 
+
+    /*
+       Projects change from 2 columns
+       to 1 column.
+    */
+
     .projects-grid {
+
         grid-template-columns: 1fr;
     }
 
+
+    /*
+       Contact cards stack vertically.
+    */
+
     .contact-links {
+
         grid-template-columns: 1fr;
     }
+
 }
 
 
+/* ==================================================
+   EXTRA SMALL SCREENS
+   ==================================================
+
+   This rule applies to screens 480 pixels
+   wide or smaller, such as many phones.
+*/
+
 @media (max-width: 480px) {
 
+
+    /*
+       Skills become one column.
+    */
+
     .skills-grid {
+
         grid-template-columns: 1fr;
     }
 
+
+    /*
+       Reduce the main heading size.
+    */
+
     .hero h1 {
+
         font-size: 3rem;
     }
 
+
+    /*
+       Reduce spacing between navigation
+       links.
+    */
+
     .nav-links {
+
         gap: 10px;
     }
 
+
+    /*
+       Make navigation text slightly smaller.
+    */
+
     .nav-links a {
+
         font-size: 0.85rem;
     }
+
 }
