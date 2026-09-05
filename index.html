@@ -2,18 +2,16 @@
 
 <!--
     ============================================
-    HTML DOCUMENT
+    PERSONAL PORTFOLIO WEBSITE
     ============================================
 
-    HTML stands for HyperText Markup Language.
+    This is my personal professional portfolio.
 
-    HTML provides the STRUCTURE of a webpage.
-    Think of it like the framework of a house:
+    HTML (HyperText Markup Language) provides
+    the structure and content of the website.
 
-    - HTML = walls, rooms, doors, etc.
-    - CSS = paint, furniture, decorations, etc.
-
-    This file contains the content of my portfolio.
+    CSS (Cascading Style Sheets), located in
+    style.css, controls the appearance and layout.
 -->
 
 <html lang="en">
@@ -21,43 +19,35 @@
 <head>
 
     <!--
-        The <head> contains information ABOUT the webpage.
-        Most of this information is not displayed directly
-        on the webpage.
+        The <head> contains information about
+        the webpage that is not displayed
+        directly on the page.
     -->
 
     <!-- Tells the browser which character system to use -->
     <meta charset="UTF-8">
 
     <!--
-        Makes the website scale properly on phones,
-        tablets, and computers.
-
-        This is important for responsive design.
+        Helps the website display correctly on
+        phones, tablets, and computers.
     -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Description used by search engines and other tools -->
-    <meta name="description" content="Sadie Gowans professional marketing portfolio">
+    <!-- Description of the website -->
+    <meta name="description"
+          content="Sadie Gowans professional entrepreneurship portfolio">
 
-    <!--
-        This is the title that appears in the browser tab.
-    -->
-    <title>Sadie Gowans | Marketing Portfolio</title>
+    <!-- Title shown in the browser tab -->
+    <title>Sadie Gowans | Entrepreneurship Portfolio</title>
 
 
     <!--
         ============================================
-        CONNECTING HTML TO CSS
+        CONNECT HTML TO CSS
         ============================================
 
-        This line tells the browser:
-
-        "Use the design instructions contained
-        in the file called style.css."
-
-        HTML = structure/content
-        CSS = appearance/design
+        This tells the browser to use the
+        styling instructions in style.css.
     -->
 
     <link rel="stylesheet" href="style.css">
@@ -67,33 +57,25 @@
 
 <body>
 
+
     <!--
         ============================================
         NAVIGATION BAR
         ============================================
 
-        <nav> represents the navigation area of
-        the website.
+        The <nav> element contains the website's
+        navigation menu.
 
-        The links below allow visitors to jump
-        to different sections of the same page.
+        Each link points to a section farther
+        down the page.
     -->
 
     <nav class="navbar">
 
-        <!--
-            This <div> groups the navigation content
-            together.
-
-            "class" gives the element a name that CSS
-            can use to style it.
-        -->
-
         <div class="nav-container">
 
             <!--
-                This is the small "SG" logo.
-                Clicking it takes the visitor back
+                Clicking "SG" returns the visitor
                 to the top of the page.
             -->
 
@@ -103,15 +85,6 @@
             <!-- Navigation links -->
 
             <div class="nav-links">
-
-                <!--
-                    href="#about" means:
-
-                    "Find the element on this page
-                    that has id='about'."
-
-                    This creates the scrolling navigation.
-                -->
 
                 <a href="#about">About</a>
 
@@ -132,15 +105,13 @@
 
     <!--
         ============================================
-        HERO / HEADER SECTION
+        HERO / HEADER
         ============================================
 
-        This is the first major section visitors see.
+        This is the first major section visitors
+        see when they arrive at the website.
 
-        The <header> element represents introductory
-        content for the webpage.
-
-        id="home" allows the navigation menu to
+        The id="home" allows the SG logo to
         link back to this section.
     -->
 
@@ -148,32 +119,27 @@
 
         <div class="hero-content">
 
-            <!-- Small introductory label -->
+            <!--
+                This small label introduces the
+                main themes of the portfolio.
+            -->
 
             <p class="eyebrow">
-                MARKETING • TECHNOLOGY • AI
+                ENTREPRENEURSHIP • INNOVATION • TECHNOLOGY
             </p>
 
 
-            <!--
-                <h1> is the MAIN heading of the page.
+            <!-- Main heading -->
 
-                A page should generally have one main
-                <h1> heading.
-            -->
-
-            <h1>Sadie Gowans</h1>
+            <h1>
+                Sadie Gowans
+            </h1>
 
 
-            <!--
-                <h2> is a secondary heading.
-
-                Here we use it to describe Sadie's
-                professional focus.
-            -->
+            <!-- Professional title -->
 
             <h2>
-                Marketing Student | Business & Technology Enthusiast
+                Entrepreneurship Student | Innovation & Technology Enthusiast
             </h2>
 
 
@@ -185,11 +151,10 @@
 
 
             <!--
-                This is a link styled to LOOK like a button.
+                This link looks like a button because
+                of the CSS styling.
 
-                It doesn't require JavaScript.
-                It simply takes the visitor to
-                the About section.
+                It takes visitors to the About section.
             -->
 
             <a href="#about" class="button">
@@ -203,57 +168,49 @@
 
     <!--
         ============================================
-        ABOUT ME SECTION
+        ABOUT ME
         ============================================
 
-        <section> is used to divide a webpage
-        into meaningful sections.
+        This section satisfies the assignment's
+        requirement for:
 
-        id="about" allows the navigation menu
-        to link directly to this section.
+        - Major
+        - Career interests
+        - AI interests
+        - Technical interests
+        - Approximately 100–150 words
     -->
 
     <section id="about" class="section">
 
         <div class="section-container">
 
-            <!-- Small section label -->
-
             <p class="section-label">
                 GET TO KNOW ME
             </p>
 
+            <h2>
+                About Me
+            </h2>
 
-            <!-- Section heading -->
-
-            <h2>About Me</h2>
-
-
-            <!--
-                <p> means "paragraph."
-
-                This is the main About Me content
-                required by the assignment.
-            -->
 
             <p class="about-text">
 
-                I am a marketing student interested in building a career
-                where creativity, communication, and business strategy
-                come together. My previous experience as a project
-                coordinator in the commercial flooring industry helped
-                me develop strong organizational, communication, and
-                problem-solving skills. I am particularly interested
-                in marketing strategy, consumer behavior, and understanding
-                what influences people's decisions. I am also interested
-                in how artificial intelligence can support marketing through
-                content creation, data analysis, customer insights, and more
-                efficient business processes. From a technical perspective,
-                I enjoy learning about data analytics, digital marketing
-                tools, website development, and using technology to solve
-                real-world business problems. I am excited to continue
-                developing my skills and finding ways to combine marketing,
-                technology, and AI in my future career.
+                I am an entrepreneurship student interested in building a
+                career focused on innovation, business development, and
+                creating solutions to real-world problems. My previous
+                experience as a project coordinator in the commercial
+                flooring industry gave me hands-on experience with business
+                operations, scheduling, inventory, communication, and
+                problem-solving. I am interested in entrepreneurship because
+                I enjoy identifying opportunities, improving processes, and
+                finding practical ways to turn ideas into action. I am also
+                interested in how artificial intelligence can help entrepreneurs
+                research opportunities, analyze information, automate tasks,
+                and make better business decisions. From a technical
+                perspective, I am interested in data analytics, website
+                development, AI tools, and learning how technology can be
+                used to build and improve businesses.
 
             </p>
 
@@ -264,15 +221,12 @@
 
     <!--
         ============================================
-        SKILLS SECTION
+        SKILLS
         ============================================
 
-        This section displays a collection of
-        skills.
-
-        Instead of a normal bullet list, we are
-        using individual <div> elements so CSS
-        can arrange them into a grid.
+        This section contains a list of skills
+        that support my interests in entrepreneurship,
+        business, technology, and AI.
     -->
 
     <section id="skills" class="section section-light">
@@ -283,41 +237,68 @@
                 WHAT I BRING
             </p>
 
-            <h2>Skills</h2>
+            <h2>
+                Skills
+            </h2>
 
 
             <!--
-                This container holds all of the skills.
+                The skills-grid contains individual
+                skill elements.
 
-                CSS will turn these individual elements
-                into a responsive grid.
+                CSS arranges these into a responsive
+                grid.
             -->
 
             <div class="skills-grid">
 
-                <div class="skill">Marketing</div>
+                <div class="skill">
+                    Entrepreneurship
+                </div>
 
-                <div class="skill">Consumer Behavior</div>
+                <div class="skill">
+                    Business Development
+                </div>
 
-                <div class="skill">Communication</div>
+                <div class="skill">
+                    Problem Solving
+                </div>
 
-                <div class="skill">Project Coordination</div>
+                <div class="skill">
+                    Project Coordination
+                </div>
 
-                <div class="skill">Problem Solving</div>
+                <div class="skill">
+                    Business Operations
+                </div>
 
-                <div class="skill">Microsoft Excel</div>
+                <div class="skill">
+                    Communication
+                </div>
 
-                <div class="skill">Data Analytics</div>
+                <div class="skill">
+                    Microsoft Excel
+                </div>
 
-                <div class="skill">AI Prompt Engineering</div>
+                <div class="skill">
+                    Data Analytics
+                </div>
 
-                <div class="skill">Generative AI</div>
+                <div class="skill">
+                    AI Prompt Engineering
+                </div>
 
-                <div class="skill">HTML</div>
+                <div class="skill">
+                    Generative AI
+                </div>
 
-                <div class="skill">GitHub</div>
+                <div class="skill">
+                    HTML & CSS
+                </div>
 
-                <div class="skill">Research</div>
+                <div class="skill">
+                    Research
+                </div>
 
             </div>
 
@@ -328,14 +309,15 @@
 
     <!--
         ============================================
-        PROJECTS SECTION
+        PROJECTS
         ============================================
 
-        This section contains four project
-        placeholders.
+        These are placeholders for projects that
+        I can add or update throughout the semester.
 
-        We can replace these with actual projects
-        as you complete them during the semester.
+        Each project uses an <article> element
+        because each project is its own piece
+        of content.
     -->
 
     <section id="projects" class="section">
@@ -346,14 +328,10 @@
                 MY WORK
             </p>
 
-            <h2>Projects</h2>
+            <h2>
+                Projects
+            </h2>
 
-
-            <!--
-                This container holds all four projects.
-
-                CSS will arrange these into a grid.
-            -->
 
             <div class="projects-grid">
 
@@ -367,13 +345,13 @@
                     </span>
 
                     <h3>
-                        Marketing Research Project
+                        Entrepreneurship Opportunity Analysis
                     </h3>
 
                     <p>
-                        Analyze consumer behavior and identify
-                        marketing opportunities using research
-                        and customer insights.
+                        Identify a business opportunity, research the
+                        market need, and evaluate potential solutions
+                        for a new venture.
                     </p>
 
                 </article>
@@ -388,13 +366,13 @@
                     </span>
 
                     <h3>
-                        AI Marketing Project
+                        AI Business Application
                     </h3>
 
                     <p>
-                        Explore how artificial intelligence can
-                        be used to improve marketing strategy
-                        and content creation.
+                        Explore how artificial intelligence can help
+                        entrepreneurs improve research, productivity,
+                        decision-making, or business processes.
                     </p>
 
                 </article>
@@ -409,13 +387,13 @@
                     </span>
 
                     <h3>
-                        Data Analytics Project
+                        Business Data Analysis
                     </h3>
 
                     <p>
-                        Analyze business data to identify trends
-                        and generate useful insights for
-                        decision-making.
+                        Analyze business data to identify trends,
+                        opportunities, and insights that can support
+                        entrepreneurial decision-making.
                     </p>
 
                 </article>
@@ -430,12 +408,12 @@
                     </span>
 
                     <h3>
-                        Web Development Project
+                        Personal Portfolio Website
                     </h3>
 
                     <p>
-                        Build and publish a responsive personal
-                        portfolio website using HTML and CSS.
+                        Design and publish a responsive professional
+                        portfolio using HTML, CSS, and GitHub Pages.
                     </p>
 
                 </article>
@@ -450,7 +428,7 @@
 
     <!--
         ============================================
-        RESUME SECTION
+        RESUME
         ============================================
 
         The assignment allows either:
@@ -459,7 +437,7 @@
         OR
         2. "Resume coming soon"
 
-        We are currently using option #2.
+        We are currently using option 2.
     -->
 
     <section id="resume" class="section section-light">
@@ -470,7 +448,9 @@
                 EXPERIENCE & EDUCATION
             </p>
 
-            <h2>Resume</h2>
+            <h2>
+                Resume
+            </h2>
 
 
             <div class="resume-box">
@@ -492,11 +472,11 @@
 
     <!--
         ============================================
-        CONTACT SECTION
+        CONTACT
         ============================================
 
-        This section gives visitors ways to
-        connect with Sadie.
+        This section provides visitors with
+        different ways to connect with me.
     -->
 
     <section id="contact" class="section contact-section">
@@ -507,21 +487,18 @@
                 LET'S CONNECT
             </p>
 
-            <h2>Contact</h2>
+            <h2>
+                Contact
+            </h2>
 
 
             <p class="contact-intro">
 
-                I would love to connect and discuss marketing,
-                technology, AI, and future opportunities.
+                I would love to connect and discuss entrepreneurship,
+                innovation, technology, AI, and future opportunities.
 
             </p>
 
-
-            <!--
-                Contact links are grouped together
-                so CSS can display them as cards.
-            -->
 
             <div class="contact-links">
 
@@ -597,15 +574,13 @@
         ============================================
 
         The footer appears at the bottom of
-        the webpage.
-
-        The copyright symbol is simply text.
+        the website.
     -->
 
     <footer>
 
         <p>
-            © 2026 Sadie Gowans • Marketing Portfolio
+            © 2026 Sadie Gowans • Entrepreneurship Portfolio
         </p>
 
     </footer>
@@ -613,132 +588,4 @@
 
 </body>
 
-</html>                <div class="skill">Marketing</div>
-                <div class="skill">Consumer Behavior</div>
-                <div class="skill">Communication</div>
-                <div class="skill">Project Coordination</div>
-                <div class="skill">Problem Solving</div>
-                <div class="skill">Microsoft Excel</div>
-                <div class="skill">Data Analytics</div>
-                <div class="skill">AI Prompt Engineering</div>
-                <div class="skill">Generative AI</div>
-                <div class="skill">HTML</div>
-                <div class="skill">GitHub</div>
-                <div class="skill">Research</div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- Projects -->
-    <section id="projects" class="section">
-        <div class="section-container">
-            <p class="section-label">MY WORK</p>
-            <h2>Projects</h2>
-
-            <div class="projects-grid">
-
-                <article class="project-card">
-                    <span class="project-number">01</span>
-                    <h3>Marketing Research Project</h3>
-                    <p>
-                        Analyze consumer behavior and identify marketing opportunities
-                        using research and customer insights.
-                    </p>
-                </article>
-
-                <article class="project-card">
-                    <span class="project-number">02</span>
-                    <h3>AI Marketing Project</h3>
-                    <p>
-                        Explore how artificial intelligence can be used to improve
-                        marketing strategy and content creation.
-                    </p>
-                </article>
-
-                <article class="project-card">
-                    <span class="project-number">03</span>
-                    <h3>Data Analytics Project</h3>
-                    <p>
-                        Analyze business data to identify trends and generate useful
-                        insights for decision-making.
-                    </p>
-                </article>
-
-                <article class="project-card">
-                    <span class="project-number">04</span>
-                    <h3>Web Development Project</h3>
-                    <p>
-                        Build and publish a responsive personal portfolio website
-                        using HTML and CSS.
-                    </p>
-                </article>
-
-            </div>
-        </div>
-    </section>
-
-
-    <!-- Resume -->
-    <section id="resume" class="section section-light">
-        <div class="section-container">
-            <p class="section-label">EXPERIENCE & EDUCATION</p>
-            <h2>Resume</h2>
-
-            <div class="resume-box">
-                <p>
-                    My professional resume will be available here soon.
-                </p>
-
-                <span class="coming-soon">Resume Coming Soon</span>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- Contact -->
-    <section id="contact" class="section contact-section">
-        <div class="section-container">
-            <p class="section-label">LET'S CONNECT</p>
-            <h2>Contact</h2>
-
-            <p class="contact-intro">
-                I would love to connect and discuss marketing, technology,
-                AI, and future opportunities.
-            </p>
-
-            <div class="contact-links">
-
-                <a href="mailto:sadie.gowans@utah.edu" class="contact-card">
-                    <span class="contact-title">Email</span>
-                    <span>sadie.gowans@utah.edu</span>
-                </a>
-
-                <a href="https://www.linkedin.com/in/sadie-wheeler/"
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   class="contact-card">
-                    <span class="contact-title">LinkedIn</span>
-                    <span>Connect with me</span>
-                </a>
-
-                <a href="https://github.com/sadiewheeler"
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   class="contact-card">
-                    <span class="contact-title">GitHub</span>
-                    <span>View my profile</span>
-                </a>
-
-            </div>
-        </div>
-    </section>
-
-
-    <!-- Footer -->
-    <footer>
-        <p>© 2026 Sadie Gowans • Marketing Portfolio</p>
-    </footer>
-
-</body>
 </html>
