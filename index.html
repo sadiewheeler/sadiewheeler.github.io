@@ -426,48 +426,70 @@
     </section>
 
 
-    <!--
-        ============================================
-        RESUME
-        ============================================
+   <!--
+    ============================================
+    RESUME SECTION
+    ============================================
 
-        The assignment allows either:
+    This section provides visitors with access
+    to my professional resume.
 
-        1. A downloadable PDF resume
-        OR
-        2. "Resume coming soon"
+    The <a> element creates a clickable link.
+    The href attribute tells the browser where
+    the link should go.
 
-        We are currently using option 2.
-    -->
+    Because the PDF is stored in the same
+    GitHub repository as this HTML file, we
+    only need to use the PDF's filename.
+-->
 
-    <section id="resume" class="section section-light">
+<section id="resume" class="section section-light">
 
-        <div class="section-container">
+    <div class="section-container">
 
-            <p class="section-label">
-                EXPERIENCE & EDUCATION
+        <p class="section-label">
+            EXPERIENCE & EDUCATION
+        </p>
+
+        <h2>
+            Resume
+        </h2>
+
+
+        <div class="resume-box">
+
+            <p>
+                View my professional experience, education,
+                skills, and qualifications.
             </p>
 
-            <h2>
-                Resume
-            </h2>
 
+            <!--
+                RESUME PDF LINK
 
-            <div class="resume-box">
+                IMPORTANT:
+                Replace "YOUR_RESUME_FILENAME.pdf" below
+                with the EXACT filename of the PDF you
+                uploaded to GitHub.
 
-                <p>
-                    My professional resume will be available here soon.
-                </p>
+                target="_blank" tells the browser to
+                open the resume in a new tab.
+            -->
 
-                <span class="coming-soon">
-                    Resume Coming Soon
-                </span>
-
-            </div>
+            <a
+                href="Sadie_Gowans_Resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="button"
+            >
+                View My Resume
+            </a>
 
         </div>
 
-    </section>
+    </div>
+
+</section>
 
 
     <!--
